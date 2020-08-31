@@ -1,0 +1,30 @@
+<nav ngxNavbarDynamicExpand class="navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    (click)="collapse.toggle()"
+    aria-controls="main-nav"
+    aria-expanded="false"
+    aria-label="Navigáció kapcsoló"
+  >
+    <span
+      class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+    </span>
+  </button>
+  <ngx-navbar-collapse id="main-nav" #collapse="ngxNavbarCollapse" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/device-list">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/templategroup">Template Group</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/activity-link">Link</a>
+      </li>
+
+    </ul>
+  </ngx-navbar-collapse>
+</nav>
